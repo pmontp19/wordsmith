@@ -1,25 +1,24 @@
 @import url(reset.css);
 
 // fonts
+/* montserrat-regular - latin */
 @font-face {
-  font-family: 'atlas-grotesk-med';
-  src: url('../fonts/AtlasGrotesk-Medium-Web.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/AtlasGrotesk-Medium-Web.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/AtlasGrotesk-Medium-Web.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/AtlasGrotesk-Medium-Web.woff') format('woff'), /* Pretty Modern Browsers */
-       url('../fonts/AtlasGrotesk-Medium-Web.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/AtlasGrotesk-Medium-Web.svg#svgFontName') format('svg'); /* Legacy iOS */
-}
-
-@font-face {
-  font-family: 'atlas-grotesk-reg';
-  src: url('../fonts/AtlasGrotesk-Regular-Web.eot'); /* IE9 Compat Modes */
-  src: url('../fonts/AtlasGrotesk-Regular-Web.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-       url('../fonts/AtlasGrotesk-Regular-Web.woff2') format('woff2'), /* Super Modern Browsers */
-       url('../fonts/AtlasGrotesk-Regular-Web.woff') format('woff'), /* Pretty Modern Browsers */
-       url('../fonts/AtlasGrotesk-Regular-Web.ttf')  format('truetype'), /* Safari, Android, iOS */
-       url('../fonts/AtlasGrotesk-Regular-Web.svg#svgFontName') format('svg'); /* Legacy iOS */
-}
+	font-family: 'atlas-grotesk-reg';
+	font-style: normal;
+	font-weight: 400;
+	src: local('Montserrat Regular'), local('Montserrat-Regular'),
+		 url('../fonts/montserrat-v14-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+		 url('../fonts/montserrat-v14-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* montserrat-500 - latin */
+  @font-face {
+	font-family: 'atlas-grotesk-med';
+	font-style: normal;
+	font-weight: 500;
+	src: local('Montserrat Medium'), local('Montserrat-Medium'),
+		 url('../fonts/montserrat-v14-latin-500.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+		 url('../fonts/montserrat-v14-latin-500.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
 
 // animations
 
