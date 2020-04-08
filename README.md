@@ -1,3 +1,5 @@
+Fork of Natalie Schoch's [Wordsmith](https://github.com/nataliefschoch/wordsmith), adapted to catalan words.
+
 # Wordsmith
 
 Install [Wordsmith](https://chrome.google.com/webstore/detail/gnpnpeephndoppbobdbpigepfdklacbp/publish-accepted?authuser=0&hl=en) at the Chrome Web Store

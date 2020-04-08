@@ -2,15 +2,27 @@
 var $word = words[Math.floor(Math.random()*words.length)];
 
 var $wordName = $word.word;
+var $wordSyllabes = $word.syllabes
 var $wordType = $word.wordtype;
 var $wordDefinition = $word.definition;
 var $wordSynonyms = $word.synonyms;
+var $wordEtimology = $word.etimology
 
-$( '.js-word' ).html( $wordName );
+$( '.js-word' ).html( $wordSyllabes );
 $( '.js-type' ).html( $wordType );
 $( '.js-definition' ).html( $wordDefinition);
-$( '.js-synonyms' ).html( $wordSynonyms );
-$( '.js-dict-link' ).attr('href', 'https://www.merriam-webster.com/dictionary/' + $wordName );
+$( '.js-dict-link' ).attr('href', 'https://dlc.iec.cat/results.asp?txtEntrada=' + $wordName );
+
+if ($wordEtimology === '') {
+	$( '.js-synonyms' ).hide();
+	$( '.text__synonyms--title').hide();
+} else {
+	$( '.js-synonyms' ).html( $wordEtimology );
+}
+
+var original = $('.js-word').text();
+var new_version = original.split('·').join('<span class="interpunct">·</span>');
+$('.js-word').html(new_version);
 
 
 // modify array
@@ -23,12 +35,12 @@ function nextVal(arr) {
 
 // set background color
 function backgroundColorDelta (firstElm) {
-	$( 'body' ).css('background-color', firstElm);
+	$( 'body' ).css('background-image', 'linear-gradient( 135deg, '+firstElm[0]+' 10%, '+firstElm[1]+' 100%)');
 }
 
 if (localStorage.getItem('localColorArr') === null) {
 	//set array first time if it doesn't exist
-	var colorsArr = ['#5F0B0D', '#5E2136', '#4F325C', '#214187', '#253764', '#1F2942', '#0F151F', '#132521', '#16321F', '#183319', '#1B383D', '#1E3C62', '#214186', '#362F5E', '#4A1D35'];
+	var colorsArr = coolhue;
 	localStorage.setItem('localColorArr', JSON.stringify(colorsArr));
 	var localColorArr = JSON.parse(localStorage.getItem('localColorArr'));
 } else {

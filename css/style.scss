@@ -3,7 +3,7 @@
 // fonts
 /* montserrat-regular - latin */
 @font-face {
-	font-family: 'atlas-grotesk-reg';
+	font-family: 'montserrat-reg';
 	font-style: normal;
 	font-weight: 400;
 	src: local('Montserrat Regular'), local('Montserrat-Regular'),
@@ -12,7 +12,7 @@
   }
   /* montserrat-500 - latin */
   @font-face {
-	font-family: 'atlas-grotesk-med';
+	font-family: 'montserrat-med';
 	font-style: normal;
 	font-weight: 500;
 	src: local('Montserrat Medium'), local('Montserrat-Medium'),
@@ -69,7 +69,7 @@ body {
 	background: $charcoal;
 	color: $white;
 	height: 100%;
-	font-family: 'atlas-grotesk-reg';
+	font-family: 'montserrat-reg';
 }
 
 section {
@@ -91,7 +91,7 @@ section {
 
 // typography styles
 p {
-	font-family: 'atlas-grotesk-reg';
+	font-family: 'montserrat-reg';
 	font-size: 20px;
 }
 
@@ -105,10 +105,15 @@ a {
 .definitions {
 	height: 90%;
 	h1.text__word {
-		font-family: 'atlas-grotesk-med';
+		font-family: 'montserrat-med';
 		font-size: 45px;
 		display: inline;
 		padding-top: 15px;
+		.interpunct {
+			opacity: 0.5;
+			margin-left: -2px;
+			margin-right: -2px;
+		}
 	}
 	p {
 		&.text__definition {
@@ -119,7 +124,7 @@ a {
 		&.text__type {
 			display: inline;
    		 	margin-top: 16px;
-    		opacity: 0.4;
+    		opacity: 0.6;
 			padding-left: 13px;
 			position: absolute;
 		}
@@ -127,11 +132,11 @@ a {
 			padding-top: 35px;
 			line-height: 31px;
 			span.text__synonyms--title {
-				opacity: 0.4;
+				opacity: 0.6;
 			}
 			a {
-				opacity: 0.4;
-				margin-left: 10px;
+				opacity: 0.6;
+				margin-left: 5px;
 			}
 		}
 	}
